@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="{{ DEFAULT_LANG }}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="{{ DEFAULT_LANG }}">
+<!--<![endif]-->
+	<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="author" content="{{ AUTHOR }}">
+
+        {% if GOOGLE_SITE_VERIFICATION %}
+            <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}">
+        {% endif %}
+
+        <title>{{ SITENAME }}{% block title %}{% if SITESUBTITLE and SHOW_SITESUBTITLE_IN_HTML %} - {{ SITESUBTITLE }}{% endif %}{% endblock title %}</title>
+
+        {% if FEED_ALL_ATOM %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+        {% endif %}
+        {% if FEED_ATOM %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+        {% endif %}
+        {% if FEED_RSS %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+        {% endif %}
+        {% if CATEGORY_FEED_ATOM and category %}
+            <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+        {% endif %}
+        {% if CATEGORY_FEED_RSS and category %}
+            <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+        {% endif %}
+        {% if TAG_FEED_ATOM and tag %}
+            <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+        {% endif %}
+        {% if TAG_FEED_RSS and tag %}
+            <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+        {% endif %}
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/colors/green.css" id="colors">
+
+        <!-- Code highlight color scheme -->
+        {% if COLOR_SCHEME_CSS %}
+            <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/code_blocks/{{ COLOR_SCHEME_CSS }}" rel="stylesheet">
+        {% else %}
+            <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/code_blocks/darkly.css" rel="stylesheet">
+        {% endif %}
+
+        {% if CSS_OVERRIDE %}
+            <!-- CSS specified by the user -->
+            <link href="{{ SITEURL }}/{{ CSS_OVERRIDE }}" rel="stylesheet">
+        {% endif %}
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    {% endblock head %}
+
+	{% block opengraph %}
+            {% for LOC in LOCALE %}
+                <meta property="og:locale" content="{{ LOC }}">
+            {% endfor %}
+		<meta property="og:site_name" content="{{ SITENAME }}">
+	{% endblock opengraph %}
+	</head>
+	<body>
+		<header id="header">
+			<!-- Container -->
+			<div class="container">
+				<!-- Logo / Mobile Menu -->
+				<div class="three columns">
+					<div id="logo">
+						<h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+					</div>
+				</div>
+				<!-- Navigation
+				================================================== -->
+				<div class="thirteen columns">
+					
+					<nav id="navigation" class="menu">
+						<ul id="responsive">
+
+							<li><a href="{{ SITEURL }}/">Home</a></li>
+
+							{% for title, link in MENUITEMS %}
+							    <li><a href="{{ link }}">{{ title }}</a></li>
+							{% endfor %}
+
+							{% if DISPLAY_PAGES_ON_MENU %}
+							    {% for p in PAGES %}
+							        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+							    {% endfor %}
+							{% elif DISPLAY_CATEGORIES_ON_MENU %}
+						        {% for cat, null in categories %}
+						            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+						        {% endfor %}
+							{% endif %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- Container / End -->
+		</header>
+		<!-- Header / End -->
+		
+		<div id="content-wrapper">
+			<section id="titlebar">
+				<!-- Container -->
+				<div class="container">
+					<div class="sixteen columns">						
+						<nav id="breadcrumbs">
+							<ul>
+								<li>You are here:</li>
+								<li><a href="{{ SITEURL }}/">Home</a></li>
+								{% block page_breadcrumbs %}{% endblock page_breadcrumbs %}
+							</ul>
+						</nav>
+					</div>
+
+				</div>
+				<!-- Container / End -->
+			</section>
+
+			<div class="container">
+				{% block content_placeholder %}{% endblock content_placeholder %}
+			</div>
+			<!-- Container / End -->
+		</div>
+		<!-- Content Wrapper / End -->
+
+
+		<div id="footer-bottom">
+			<!-- Container -->
+			<div class="container">
+				<div class="eight columns">Blog powered by <a href="http://getpelican.com">Pelican</a></div>
+				{% if SOCIAL %}
+					<div class="eight columns">
+						<ul class="social-icons-footer">
+						    {% for name,link in SOCIAL %}
+								<li>
+									<a href="{{ link }}" class="tooltip top" title="{{ name }}">
+										<i class="icon-{{ name|lower }}"></i>
+									</a>
+								</li>
+						    {% endfor %}
+							<li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
+						</ul>
+					</div>
+				{% endif %}
+			</div>
+			<!-- Container / End -->
+		</div>
+		<!-- Footer Bottom / End -->
+		
+	<!-- Javascripts -->
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.themepunch.plugins.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.themepunch.showbizpro.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.easing.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.tooltips.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.magnific-popup.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.superfish.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.twitter.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.flexslider.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.jpanelmenu.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.contact.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.isotope.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/custom.js"></script>
+	</body>
+</html>

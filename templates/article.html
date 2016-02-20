@@ -1,0 +1,80 @@
+﻿{% extends "with-sidebar.html" %}
+
+{% block title %} - {{ article.title }}{% endblock title %}
+
+{% block head %}
+    {{ super() }}
+
+    {% for keyword in article.keywords %}
+        <meta name="keywords" contents="{{keyword}}" />
+    {% endfor %}
+
+    {% for description in article.description %}
+        <meta name="description" contents="{{description}}" />
+    {% endfor %}
+
+    {% for tag in article.tags %}
+        <meta name="tags" contents="{{tag}}" />
+    {% endfor %}
+{% endblock %}
+
+{% block opengraph %}
+	{{ super() }}
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="{{ author }}">
+	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+	<meta property="og:title" content="{{ article.title }}">
+	<meta property="og:description" content="{{ article.headline }}">
+    {% if article.image %}
+       <meta property="og:image" content="{{ SITEURL }}/{{ article.image }}">
+    {% else %}
+	   <meta property="og:image" content="{{ SITEURL }}/images/guilherme-toti.jpg">
+    {% endif %}
+	<meta property="article:published_time" content="{{ article.date }}">
+{% endblock %}
+
+{% block page_breadcrumbs %}
+<li><a href="{{ SITEURL }}/category/{{ article.category }}">{{ article.category }}</a></li>
+<li>{{ article.title }}</li>
+{% endblock page_breadcrumbs %}
+
+{% block content %}
+<article class="post" style="margin: 0; border: 0;">
+
+	<figure class="post-img media">
+		<div class="mediaholder">
+			<a class="mfp-image" title="Touchpad Graphics Tablet" href="images/blog-01a.jpg">
+				<img src="images/blog-01.jpg" alt=""/>
+				<div class="hovercover">
+					<div class="hovericon"><i class="hoverzoom"></i></div>
+				</div>
+			</a>
+		</div>
+	</figure>
+	
+	<div class="post-format">
+		<div class="circle"><i class="icon-pencil"></i><span></span></div>
+	</div>
+
+	<section class="post-content">
+
+		<header class="meta">
+			<h2><a href="#">How To Download The Google Fonts Catalog</a></h2>
+			<ul>
+				<li>By <a href="#">Charlie Smith</a> - 28 May 2013</li>
+				<li><a href="#">Technology</a>, <a href="#">Painting</a></li>
+				<li><a href="#">2 Comments</a></li>
+			</ul>
+		</header>
+
+		<p>Morbi placerat bibendum eget dolor pellentesque sed consectetur pulvinar pellentesque bibendum. Vestibulum varius hendrerit turpis quiseam cursus. Donec bibendum vestibulum gravida. Pellentesque condimentum orci vel leo laoreet accumsan interdum eros vel sapien tincidunt dignissim. Integer mauris lacus consequat.</p>
+		<blockquote>Mauris aliquet ultricies ante, non faucibus ante gravida sed. Sed ultrices pellentesque purus, vulputate volutpat ipsum hendrerit sed neque sed sapien rutrum laoreet justo ultrices. In pellentesque lorem condimentum dui morbi pulvinar dui non quam pretium ut lacinia tortor.</blockquote>
+		<p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Cras suscipit, quam vitae adipiscing faucibus, risus nibh laoreet odio, a porttitor metus eros ut enim. Morbi augue velit, tempus mattis dignissim nec, porta sed risus. Donec eget magna eu lorem tristique pellentesque eget eu dui. Fusce lacinia tempor malesuada. Ut lacus sapien, placerat a ornare nec, elementum sit amet felis. Maecenas pretium lorem hendrerit eros sagittis fermentum.</p>
+		<p style="margin:0;">Phasellus enim magna, varius et commodo ut, ultricies vitae velit. Ut nulla tellus, eleifend euismod pellentesque vel, sagittis vel justo. In libero urna, venenatis sit amet ornare non, suscipit nec risus. Sed consequat justo non mauris pretium at tempor justo sodales. Quisque tincidunt laoreet malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer vitae ante enim. Fusce sed elit est. Suspendisse sit amet mauris in quam pretium faucibus et aliquam odio. </p>
+		
+	</section>
+	<div class="clearfix"></div>
+
+</article>
+
+{% endblock content %}
