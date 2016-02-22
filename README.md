@@ -1,6 +1,19 @@
 # My pelican theme
 This is the theme used in my pelican blog
 
+# Extras
+
+Pages can have subtitles, just add:
+```
+Subtitle: Put your subtitle here
+```
+
+Articles can have one cover image, just add:
+```
+Image: image_name.extension
+```
+*Image must be on `/content/images*
+
 # Settings
 
 **This settings must be on `pelicanconf.py`**
@@ -20,14 +33,3 @@ The text in sidebar About
 ```
 SIDEBAR_ABOUT = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quae hic dicta eius ad quam eligendi minima praesentium voluptatum? Quidem quaerat eaque libero velit impedit dicta, repudiandae sapiente. Deserunt, excepturi."
 ```
-
-Pages can have subtitles, just add:
-```
-Subtitle: Put your subtitle here
-```
-
-Articles can have one cover image, just add:
-```
-Image: image_name.extension
-```
-*Image must be on `/content/images*
