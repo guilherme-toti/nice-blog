@@ -1,4 +1,4 @@
-# My pelican theme
+# Nice-Blog theme
 This is the theme used in my pelican blog
 
 # Extras
