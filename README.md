@@ -1,5 +1,9 @@
 # Nice-Blog theme
 This is the theme used in my pelican blog
+http://www.guilhermetoti.com.br
+
+# Screenshot
+![Theme screenshot](screenshot.png)
 
 # Extras
 
