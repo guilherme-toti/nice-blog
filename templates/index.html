@@ -25,9 +25,7 @@
 						<ul>
 							<li>By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% if not loop.last %}, {% endif%}{% endfor %}</li>
 							<li>{{ article.locale_date }}</li>
-							{% if DISQUS_SITENAME %}
-								<li><a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">Comments</a></li>
-							{% endif %}
+							<li><a href="{{ SITEURL }}/category/{{ article.category }}">{{ article.category }}</a></li>
 						</ul>
 					</header>
 					<p>
@@ -37,28 +35,28 @@
 							{{ article.summary|truncate(280) }}
 						{% endif %}
 	        		</p>
-					<a href="blog-post.html" class="button color">Read More</a>
+					<a href="{{ SITEURL }}/{{ article.url }}" class="button color">Read More</a>
 				</section>
 			</div>
 			<div class="clearfix"></div>
 		</article>
 	{% endfor %}
 
-{% if DEFAULT_PAGINATION %}
-<!-- Pagination -->
-<nav class="pagination">
-	<ul>
-		<li>
-		    {% if articles_page.has_previous() %}
-		        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">Newest Posts &rarr;</a>
-		    {% endif %}
-		    {% if articles_page.has_next() %}
-		        <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Older Posts &rarr;</a>
-		    {% endif %}
-		</li>
-		<!-- Page {{ articles_page.number }} / {{ articles_paginator.num_pages }} -->
-	</ul>
-	<div class="clearfix"></div>
-</nav>
-{% endif %}
+	{% if DEFAULT_PAGINATION %}
+	<!-- Pagination -->
+	<nav class="pagination">
+		<ul>
+			<li>
+			    {% if articles_page.has_previous() %}
+			        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">Newest Posts &rarr;</a>
+			    {% endif %}
+			    {% if articles_page.has_next() %}
+			        <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Older Posts &rarr;</a>
+			    {% endif %}
+			</li>
+			<!-- Page {{ articles_page.number }} / {{ articles_paginator.num_pages }} -->
+		</ul>
+		<div class="clearfix"></div>
+	</nav>
+	{% endif %}
 {% endblock content %}

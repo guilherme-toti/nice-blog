@@ -1,0 +1,20 @@
+﻿{% extends "with-sidebar.html" %}
+
+{% block title %} - Archives{% endblock title %}
+
+{% block page_breadcrumbs %}
+<li>Archives</li>
+{% endblock page_breadcrumbs %}
+
+{% block content %}
+	<h3 class="headline">Archives</h3>
+	<span class="line" style="margin-bottom:30px;"></span>
+	<div class="clearfix"></div>
+
+    <dl>
+        {% for article in dates %}
+            <dt>{{ article.locale_date }}</dt>
+            <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+        {% endfor %}
+    </dl>
+{% endblock content %}

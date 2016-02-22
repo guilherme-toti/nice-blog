@@ -45,7 +45,11 @@
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/colors/green.css" id="colors">
+        {% if THEME_COLOR %}
+        	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/colors/{{ THEME_COLOR }}.css" id="colors">
+        {% else %}
+        	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/colors/blue.css" id="colors">
+        {% endif %}
 
         <!-- Code highlight color scheme -->
         {% if COLOR_SCHEME_CSS %}
@@ -165,18 +169,7 @@
 		
 	<!-- Javascripts -->
 	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.themepunch.plugins.min.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.themepunch.showbizpro.min.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.easing.min.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.tooltips.min.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.magnific-popup.min.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.superfish.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.twitter.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.flexslider.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.jpanelmenu.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.contact.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.isotope.min.js"></script>
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/custom.js"></script>
+	{% include 'analytics.html' %}
+	{% include 'disqus_script.html' %}
 	</body>
 </html>
