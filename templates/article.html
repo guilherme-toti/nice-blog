@@ -34,7 +34,7 @@
 {% endblock %}
 
 {% block page_breadcrumbs %}
-<li><a href="{{ SITEURL }}/category/{{ article.category }}">{{ article.category }}</a></li>
+<li><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></li>
 <li>{{ article.title }}</li>
 {% endblock page_breadcrumbs %}
 
