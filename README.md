@@ -37,3 +37,8 @@ The text in sidebar About
 ```
 SIDEBAR_ABOUT = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quae hic dicta eius ad quam eligendi minima praesentium voluptatum? Quidem quaerat eaque libero velit impedit dicta, repudiandae sapiente. Deserunt, excepturi."
 ```
+
+Copyright text 
+```
+COPYRIGHT = "Text Here "
+```
