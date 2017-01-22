@@ -1,9 +1,8 @@
 # Nice-Blog theme
-This is the theme used in my pelican blog
-http://www.guilhermetoti.com.br
+This is the theme use in my pelican blog forked from Guilherme-toti at https://github.com/guilherme-toti/nice-blog
+You can see it Working at: https://blog.colacoweb.net
 
-# Screenshot
-![Theme screenshot](screenshot.png)
+Fixed pages not showing on Menu, and added Copyright text. 
 
 # Extras
 
