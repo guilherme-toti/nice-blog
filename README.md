@@ -21,7 +21,7 @@ Article image gallery
 ```
 gallery:<galleryname>
 ```
-*Images myst be on `./content/images/gallery/<galleryname>`
+*Images must be on `./content/images/gallery/<galleryname>`
 
 # Settings
 
