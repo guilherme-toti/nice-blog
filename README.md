@@ -2,8 +2,6 @@
 This is the theme use in my pelican blog forked from Guilherme-toti at https://github.com/guilherme-toti/nice-blog
 You can see it Working at: https://blog.colacoweb.net
 
-Fixed pages not showing on Menu, and added Copyright text.
-
 # Extras
 
 Pages can have subtitles, just add:
