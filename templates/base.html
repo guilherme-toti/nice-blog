@@ -77,6 +77,7 @@
             {% endfor %}
 		<meta property="og:site_name" content="{{ SITENAME }}">
 	{% endblock opengraph %}
+	{% include 'analytics.html' %}
 	</head>
 	<body>
 		<header id="header">
@@ -169,7 +170,6 @@
 
 	<!-- Javascripts -->
 	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
-	{% include 'analytics.html' %}
 	{% include 'disqus_script.html' %}
 	</body>
 </html>
