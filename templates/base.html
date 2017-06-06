@@ -77,6 +77,7 @@
             {% endfor %}
 		<meta property="og:site_name" content="{{ SITENAME }}">
 	{% endblock opengraph %}
+	{% include 'analytics.html' %}
 	</head>
 	<body>
 		<header id="header">
@@ -91,7 +92,7 @@
 				<!-- Navigation
 				================================================== -->
 				<div class="thirteen columns">
-					
+
 					<nav id="navigation" class="menu">
 						<ul id="responsive">
 
@@ -102,7 +103,7 @@
 							{% endfor %}
 
 							{% if DISPLAY_PAGES_ON_MENU %}
-							    {% for p in PAGES %}
+							    {% for p in pages %}
 							        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
 							    {% endfor %}
 							{% elif DISPLAY_CATEGORIES_ON_MENU %}
@@ -117,12 +118,12 @@
 			<!-- Container / End -->
 		</header>
 		<!-- Header / End -->
-		
+
 		<div id="content-wrapper">
 			<section id="titlebar">
 				<!-- Container -->
 				<div class="container">
-					<div class="sixteen columns">						
+					<div class="sixteen columns">
 						<nav id="breadcrumbs">
 							<ul>
 								<li>You are here:</li>
@@ -147,7 +148,7 @@
 		<div id="footer-bottom">
 			<!-- Container -->
 			<div class="container">
-				<div class="eight columns">Blog powered by <a href="http://getpelican.com">Pelican</a></div>
+				<div class="eight columns">&copy; {{ COPYRIGHT }} || Blog powered by <a href="http://getpelican.com">Pelican</a></div>
 				{% if SOCIAL %}
 					<div class="eight columns">
 						<ul class="social-icons-footer">
@@ -166,10 +167,9 @@
 			<!-- Container / End -->
 		</div>
 		<!-- Footer Bottom / End -->
-		
+
 	<!-- Javascripts -->
 	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
-	{% include 'analytics.html' %}
 	{% include 'disqus_script.html' %}
 	</body>
 </html>
