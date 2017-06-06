@@ -1,6 +1,7 @@
 # Nice-Blog theme
 This is the theme use in my pelican blog https://github.com/guilherme-toti/nice-blog
 
+<<<<<<< HEAD
 # Screenshot
 ![Theme screenshot](screenshot.png)
 
@@ -8,6 +9,8 @@ This is the theme use in my pelican blog https://github.com/guilherme-toti/nice-
 
 https://blog.colacoweb.net
 
+=======
+>>>>>>> 9121439686d65cfb1cc1bf48f0e5348cd5b4cccb
 # Extras
 
 Pages can have subtitles, just add:
