@@ -1,8 +1,12 @@
 # Nice-Blog theme
-This is the theme use in my pelican blog forked from Guilherme-toti at https://github.com/guilherme-toti/nice-blog
-You can see it Working at: https://blog.colacoweb.net
+This is the theme use in my pelican blog https://github.com/guilherme-toti/nice-blog
 
-Fixed pages not showing on Menu, and added Copyright text.
+# Screenshot
+![Theme screenshot](screenshot.png)
+
+# Blogs Using Nice-Blog
+
+https://blog.colacoweb.net
 
 # Extras
 
@@ -21,7 +25,7 @@ Article image gallery
 ```
 gallery:<galleryname>
 ```
-*Images must be on `./content/images/gallery/<galleryname>`
+**Images must be on** `./content/images/gallery/<galleryname>`
 
 # Settings
 
@@ -31,7 +35,7 @@ Change theme color
 ```
 THEME_COLOR = 'blue'
 ```
-*Available colors is on `./static/css/colors`*
+**Available colors is on `./static/css/colors`**
 
 To select what to show on sidebar
 ```
@@ -53,4 +57,29 @@ To enable gallery plugin support
 PLUGINS_PATHS = ['PluginsRelativePath', 'or/absolute/path/to/plugins/dir']
 PLUGINS = ['gallery']
 GALLERY_PATH = 'images/gallery/'
+```
+
+To enable Piwik analytics support
+```
+#Piwik mandatory variables
+DOMAIN = "yourdomain.com"
+PIWIK_URL = "//analytics.address.com"
+PIWIK_SITE_ID ="ID_NUMBER"
+```
+**PIWIK_URL should be as in the example without http: or https:**
+
+To enable Piwik tracking code options:
+
+```
+#Track visitors across all subdomains
+TRACK_SUBDOMAINS = True
+
+#Prepend the site domain to the page title when tracking
+PREPEND_DOMAIN = True
+
+#In the "Outlinks" report, hide clicks to know alias URLs
+HIDE_CLICK_KNOWN_ALIAS = True
+
+#Track users with JavaScript disabled
+TRACK_NO_JAVA = True
 ```
