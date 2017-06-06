@@ -49,7 +49,7 @@
 		</div>
 	</figure>
 	{% endif %}
-	
+
 	<div class="post-format">
 		<div class="circle"><i class="icon-pencil"></i><span></span></div>
 	</div>
@@ -68,7 +68,15 @@
 		</header>
 
 		{{ article.content }}
-
+    {% if article.album %}
+        {% for image in article.galleryimages %}
+            <div class="gallery">
+                <a target="_blak" class="{{ article.album }} cboxElement" href="{{ SITEURL }}/images/gallery/{{ article.album }}/{{ image }}">
+                    <img src="{{ SITEURL }}/images/gallery/{{ article.album }}/{{ image }}">
+                </a>
+            </div>
+        {% endfor %}
+    {% endif %}
 		{% if article.tags %}
 		    <div class="tags">
 		        <p>tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% endfor %}</p>
@@ -76,7 +84,7 @@
 		{% endif %}
 
 		{% include 'sharing.html' %}
-		
+
 		{% if DISQUS_SITENAME and article.status != "draft" %}
 		    <div class="comments">
 		        <div id="disqus_thread"></div>

@@ -94,7 +94,7 @@
 
 #current,
 .menu ul li a:hover,
-.menu ul > li:hover > a { 
+.menu ul > li:hover > a {
 	border-bottom: 3px solid #a0a0a0;
 	background-color: #fbfbfb;
 }
@@ -251,7 +251,7 @@
 		position: relative;
 		width: 100%;
 	}
-	
+
 	body { padding-top: 0; }
 
 	#header #logo {
@@ -284,7 +284,7 @@
 		z-index: 100;
 		position: relative;
 	}
-	
+
 	#menu-search {
 		display: none;
 	}
@@ -313,7 +313,7 @@
 	#menu-search input:focus::-webkit-input-placeholder { color: #888; opacity: 1; }
 	#menu-search input:focus::-moz-placeholder { color: #888; opacity: 1; }
 	#menu-search input:focus:-ms-input-placeholder { color: #888; opacity: 1; }
-	
+
 	.jPanelMenu-panel {
 		-webkit-box-shadow: 3px 0 20px 0 rgba(0, 0, 0, 0.28);
 		box-shadow: 3px 0 20px 0 rgba(0, 0, 0, 0.28);
@@ -639,8 +639,8 @@
 .mfp-s-error .mfp-content {
 	display: none;
 }
-  
-.mfp-s-loading .mfp-arrow { 
+
+.mfp-s-loading .mfp-arrow {
 	display: none;
 }
 
@@ -898,7 +898,7 @@ img.mfp-img {
 	margin-left: 5px;
    }
 }
-	
+
 @media all and (max-width: 800px) { .mfp-arrow {width: 70px;} }
 
 .mfp-ie7 .mfp-img {
@@ -2079,7 +2079,7 @@ html[xmlns] .slides {display: block;}
 	left: 38%
 }
 
-.post-content { margin: -57px 0 0 89px }
+.post-content { margin: 0 0 0 89px }
 .medium .post-content {margin:0;}
 .post-content h2 a { color: #505050; }
 .post-content h2 a:hover { color: #707070; }
@@ -2938,7 +2938,7 @@ input[type="submit"]:hover {
 }
 
 #tiptip_holder.tip_top {
-	padding-bottom: 5px; 
+	padding-bottom: 5px;
 	-webkit-transform: translateX(12px)
 }
 
@@ -3512,7 +3512,7 @@ blockquote {
 .list-4 li:before { content: ""; }
 
 
-/* Pricing Tables 
+/* Pricing Tables
 ===================================== */
 .plan { box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.03); }
 
@@ -3797,7 +3797,7 @@ input.search {
 	.caption h2,
 	.caption h3,
 	.caption p { margin:0; }
-	
+
 	.menu ul > li > a { padding-left: 15px; padding-right: 15px; }
 
 	ol li ol.childlist .comment-des {
@@ -3812,12 +3812,12 @@ input.search {
 
 	.add-comment textarea,
 	#contact textarea { min-width: 97%; }
-	
+
 	.flickr-widget-blog a {
 		width: 57px;
 		height: 57px;
 	}
-	
+
 	#not-found { margin: 50px 0 75px 0; }
 
 	#not-found h2 {
@@ -3865,14 +3865,14 @@ input.search {
 
 	.add-comment textarea,
 	#contact textarea { min-width: 96%; }
-	
+
 	.flickr-widget-blog a {
 		width: 69px;
 		height: 69px;
 	}
-	
+
 	#not-found {margin: 35px 0 60px 0;}
-	
+
 	#not-found h2 {
 		font-size: 160px;
 		line-height: 160px;
@@ -3898,7 +3898,7 @@ input.search {
 	.caption h3 {font-size: 20px; margin-top: 15px;}
 	.caption p {display: none;}
 	.img-1 {margin-left: 0 !important;}
-	
+
 	.fullwidthbanner-container { top: 0; }
 
 	.showbiz.our-clients ul li img { margin: 0 auto; }
@@ -3908,12 +3908,12 @@ input.search {
 		margin-top: 0;
 		padding: 0 0 24px 0;
 	}
-	
+
 	#titlebar {
 		top: 0;
 		margin-bottom: 40px;
 	}
-	
+
 	#titlebar h2 {
 		margin-top: 3px;
 	}
@@ -3921,7 +3921,7 @@ input.search {
 	#googlemaps { padding-bottom: 40%; }
 	.plan-features { margin-bottom: 25px; }
 	.medium .post-img { margin-bottom: 20px; }
-	
+
 	#filters { margin: 10px 0 30px 0; }
 	#filters a { margin: 0 5px 5px 0; }
 	.line.filters { display: none; }
@@ -3931,33 +3931,33 @@ input.search {
 		margin: -11px 0 0 0;
 		z-index: 5;
 	}
-	
+
 	.social-icons-footer {
 		margin-top: 5px;
 		float: left;
 	}
-	
+
 	#footer { padding-top: 10px; }
 	#footer h3 { margin-top: 30px; }
-	
+
 	.featured-boxes { margin: 40px 0 5px 0; }
 	.featured-box { margin: 0 0 25px 0; }
-	
+
 	a.button.launch { margin: 0 0 30px 0; }
 	#related-work figure {margin-bottom: 20px;}
-	
+
 	.search-form {
 	 	margin-top: 40px;
 		padding-top: 40px;
 		border-top: 1px solid #f0f0f0;
 	}
-	
+
 	#contact input[type="submit"] {
 		margin: 0 0 30px 0;
 	}
-	
+
 	#not-found {margin: 15px 0 25px 0;}
-	
+
 	#not-found h2 {
 		font-size: 110px;
 		line-height: 120px;
@@ -3991,7 +3991,7 @@ input.search {
 
 	.add-comment textarea,
 	#contact textarea { min-width: 95%; }
-	
+
 	.flickr-widget-blog a {
 		width: 87px;
 		height: 87px;
@@ -4019,15 +4019,33 @@ input.search {
 
 	.add-comment textarea,
 	#contact textarea { width: 90%; }
-	
+
 	.flickr-widget-blog a {
 		width: 82px;
 		height: 82px;
 	}
-	
+
 	.dropcap {font-size: 52px;}
 
 }
 
 
 .no-mg-top { margin-top: 0; }
+
+/* Gallery */
+
+.gallery {
+		margin: 5px;
+		border: 1px solid #ccc;
+		float: left;
+		width: 180px;
+}
+
+.gallery:hover {
+		border: 1px solid #777;
+}
+
+.gallery img {
+		width: 100%;
+		height: auto;
+}
