@@ -84,14 +84,20 @@
 			<!-- Container -->
 			<div class="container">
 				<!-- Logo / Mobile Menu -->
-				<div class="three columns">
+				<div class="five columns">
+				{% if LOGO %}
 					<div id="logo">
+						<a href="{{ SITEURL }}/"><img src="{{ SITEURL }}/images/{{ LOGO }}"></a>
+					</div>
+				{% else %}
+					<div id="textlogo">
 						<h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
 					</div>
+				{% endif %}
 				</div>
-				<!-- Navigation
+						<!-- Navigation
 				================================================== -->
-				<div class="thirteen columns">
+				<div class="eleven columns">
 
 					<nav id="navigation" class="menu">
 						<ul id="responsive">
@@ -119,20 +125,25 @@
 		</header>
 		<!-- Header / End -->
 
+		<!-- Breadcrumbs Container-->
 		<div id="content-wrapper">
 			<section id="titlebar">
 				<!-- Container -->
 				<div class="container">
-					<div class="sixteen columns">
-						<nav id="breadcrumbs">
-							<ul>
-								<li>You are here:</li>
-								<li><a href="{{ SITEURL }}/">Home</a></li>
-								{% block page_breadcrumbs %}{% endblock page_breadcrumbs %}
-							</ul>
-						</nav>
+				{% if LOGO %}
+					<div class="five columns">
+							<h3>{{ SITENAME }}</h3>
 					</div>
-
+				{% endif %}
+				<div class="thirteen columns">
+					<nav id="breadcrumbs">
+						<ul>
+							<li>You are here:</li>
+							<li><a href="{{ SITEURL }}/">Home</a></li>
+							{% block page_breadcrumbs %}{% endblock page_breadcrumbs %}
+						</ul>
+					</nav>
+				</div>
 				</div>
 				<!-- Container / End -->
 			</section>
@@ -143,7 +154,6 @@
 			<!-- Container / End -->
 		</div>
 		<!-- Content Wrapper / End -->
-
 
 		<div id="footer-bottom">
 			<!-- Container -->

@@ -35,14 +35,22 @@
 
 /* Logo
 ====================================*/
-#logo { margin-top: 32px; }
+#logo { margin-top: 10px; }
 
 #logo a img {
 	float: left;
 	width: auto;
-	height: 24px;
+	max-height: 60px;
+	margin-top: auto;
 }
 
+#textlogo { margin-top: 32px; }
+
+#textlogo a img {
+	float: left;
+	width: auto;
+	max-height: 32px;
+}
 
 /* Menu
 ====================================*/
@@ -481,7 +489,6 @@
 	padding:0;
 	background: none;
 }
-
 
 /* Social Icons & Footer
 ====================================*/
