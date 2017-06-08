@@ -37,6 +37,13 @@ THEME_COLOR = 'blue'
 ```
 **Available colors is on `./static/css/colors`**
 
+Menu left side Logo: 
+
+```
+LOGO = 'logo.extension'
+```
+**If No logo specified, Blog title will be used instead. 
+
 To select what to show on sidebar
 ```
 SIDEBAR_DISPLAY = ['about', 'categories', 'tags']
