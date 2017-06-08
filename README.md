@@ -91,3 +91,11 @@ HIDE_CLICK_KNOWN_ALIAS = True
 #Track users with JavaScript disabled
 TRACK_NO_JAVA = True
 ```
+
+**Did you like nice-blog? do you use it on your pelican blog?**
+
+let us know or just add it to README.MD and make a pull request
+
+**Want to help out and contribute?**
+
+make a pull request, open an issue, let others know about this project ... there are plenty of ways to contribute, if you want to, just do it!
