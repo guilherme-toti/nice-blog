@@ -42,7 +42,8 @@ Menu left side Logo:
 ```
 LOGO = 'logo.extension'
 ```
-**If No logo specified, Blog title will be used instead. 
+**If No logo specified, Blog title will be used instead.**
+**Logo must be in Images directory.**
 
 To select what to show on sidebar
 ```
