@@ -260,7 +260,11 @@
 		width: 100%;
 	}
 
-	body { padding-top: 0; }
+	body {
+		padding-top: 0;
+		min-height: 100vh;
+		position: relative;
+		}
 
 	#header #logo {
 		width: 124px;
@@ -3661,6 +3665,9 @@ blockquote {
 /* Footer Bottom
 ====================================*/
 #footer-bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 	background-color: #a0a0a0;
 	padding: 20px 0 17px 0;
 	color: #fff;
