@@ -1,5 +1,5 @@
 # Nice-Blog theme
-This is the theme use in my pelican blog https://github.com/guilherme-toti/nice-blog
+This is the theme use in my pelican blog http://guilhermetoti.com/
 
 # Screenshot
 ![Theme screenshot](screenshot.png) ![Theme screenshot](screenshot2.png)
