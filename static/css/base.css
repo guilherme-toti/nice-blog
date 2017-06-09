@@ -30,7 +30,10 @@
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block; }
 	body {
-		line-height: 1; }
+		line-height: 1;
+		min-height: 100vh;
+		position: relative;
+	}
 	ol, ul {
 		list-style: none; }
 	blockquote, q {
@@ -54,7 +57,7 @@
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  	}
-	
+
 	#content-wrapper {
 		padding: 0 0 40px 0;
 		background-color: #fff;
@@ -66,7 +69,7 @@
 		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 		background: url(../images/bg/noise.png) repeat;
 	}
-	
+
 	#header {
 		margin-left: auto;
 		margin-right: auto;
@@ -88,7 +91,7 @@
 		height: auto;
 		max-width: 100%;
 	}
-	
+
 	.columns.google-map img {
 		max-width: none;
 	}
@@ -97,7 +100,7 @@
 		height: auto;
 		display:block;
 	}
-	
+
 	img {
 		width: auto;
 		border: 0;
@@ -127,12 +130,12 @@
 		float: left;
 		margin: 5px 15px 8px 0;
 	}
-	
+
 	.image-right {
 		float:right;
 		margin: 5px 0 8px 15px;
 	}
-	
+
 	.image-right,
 	.image-left {
 		 padding: 5px;
@@ -149,7 +152,7 @@
 		color: #505050;
 		font-weight: 500;
 	}
-		
+
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 28px; line-height: 50px; }
 	h2 { font-size: 24px; line-height: 30px; }
@@ -224,7 +227,7 @@
 	input[type="email"]:focus,
 	textarea:focus {
 		border: 1px solid #d6d6d6;
-		color: #888; 
+		color: #888;
 		}
 	textarea {
 		min-height: 60px; }
@@ -232,7 +235,7 @@
 	legend {
 		display: block;
 		font-weight: bold;
-		font-size: 14px; 
+		font-size: 14px;
 		font-weight: normal;
 		margin-bottom: 5px;}
 	select {
@@ -244,4 +247,3 @@
 		font-weight: normal;
 		font-size: 14px;
 		color: #444; }
-
