@@ -2,6 +2,10 @@
 
 {% block title %}- {{ page.title }}{% endblock title %}
 
+{% block page_breadcrumbs %}
+	<li>{{ page.title }}</li>
+{% endblock page_breadcrumbs %}
+
 {% block content %}
 	<h3 class="headline">
 		{{ page.title }}{% if page.subtitle %}<small> - {{ page.subtitle }}</small>{% endif %}
