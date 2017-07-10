@@ -2090,7 +2090,7 @@ html[xmlns] .slides {display: block;}
 	left: 38%
 }
 
-.post-content { margin: 0 0 0 89px }
+.post-content { width: 100% }
 .medium .post-content {margin:0;}
 .post-content h2 a { color: #505050; }
 .post-content h2 a:hover { color: #707070; }
