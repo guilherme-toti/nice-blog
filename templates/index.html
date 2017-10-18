@@ -25,7 +25,7 @@
 						<ul>
 							<li>By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% if not loop.last %}, {% endif%}{% endfor %}</li>
 							<li>{{ article.locale_date }}</li>
-							<li><a href="{{ SITEURL }}/category/{{ article.category }}">{{ article.category }}</a></li>
+							<li><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></li>
 						</ul>
 					</header>
 					<p>
