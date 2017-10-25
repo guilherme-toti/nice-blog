@@ -7,6 +7,7 @@ This is the theme use in my pelican blog http://guilhermetoti.com/
 # Blogs Using Nice-Blog
 
 https://blog.colacoweb.net
+http://pietromarchesi.net/
 
 # Extras
 
