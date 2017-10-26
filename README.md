@@ -7,6 +7,7 @@ This is the theme use in my pelican blog http://guilhermetoti.com/
 # Blogs Using Nice-Blog
 
 https://blog.colacoweb.net
+
 http://pietromarchesi.net
 
 # Extras
@@ -44,7 +45,8 @@ THEME_COLOR = 'blue'
 LOGO = 'logo.extension'
 ```
 **If No logo specified, Blog title will be used instead.**
-**Logo must be inside **`./content/images`
+
+**Logo must be inside** `./content/images`
 
 ### To select what to show on sidebar:
 ```
