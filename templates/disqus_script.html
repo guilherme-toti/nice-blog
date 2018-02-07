@@ -1,11 +1,9 @@
-{% if DISQUS_SITENAME %}
-<script type="text/javascript">
-    var disqus_shortname = '{{ DISQUS_SITENAME }}';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+<script>
+(	function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://somatheus-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
 </script>
-{% endif %}
+<noscript>Please enable JavaScript to view the</noscript>
