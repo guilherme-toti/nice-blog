@@ -44,6 +44,8 @@
         <!-- CSS -->
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
         <!-- Custom CSS -->
         {% if THEME_COLOR %}
         	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/colors/{{ THEME_COLOR }}.css" id="colors">
@@ -165,11 +167,13 @@
 						    {% for name,link in SOCIAL %}
 								<li>
 									<a href="{{ link }}" class="tooltip top" title="{{ name }}">
-										<i class="icon-{{ name|lower }}"></i>
+										<i class="fab fa-{{ name|lower }}"></i>
 									</a>
 								</li>
 						    {% endfor %}
-							<li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
+                                                    {% if RSS %}
+							<li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" class="tooltip top" title="RSS"><i class="fas fa-rss"></i></a></li>
+                                                    {% endif %}
 						</ul>
 					</div>
 				{% endif %}
