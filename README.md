@@ -10,6 +10,7 @@ https://blog.colacoweb.net
 
 http://pietromarchesi.net
 
+
 # Extras
 
 ### Pages can have subtitles, just add:
@@ -40,13 +41,18 @@ THEME_COLOR = 'blue'
 **Available colors is on `./static/css/colors`**
 
 ### Menu left side Logo: 
-
 ```
 LOGO = 'logo.extension'
 ```
 **If No logo specified, Blog title will be used instead.**
 
 **Logo must be inside** `./content/images`
+
+### Favicon
+
+The favicon should be 16x16 and should be on `/content/images`
+
+`FAVICON = 'ICONFILE.ico'`
 
 ### To select what to show on sidebar:
 ```

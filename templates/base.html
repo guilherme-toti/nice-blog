@@ -40,7 +40,10 @@
         {% if TAG_FEED_RSS and tag %}
             <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
-
+        <!-- FAVICON -->
+        {% if FAVICON %}
+           <link rel="icon" href="{{ SITEURL }}/images/{{ FAVICON }}" type="image/gif">
+        {% endif %}
         <!-- CSS -->
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
 
