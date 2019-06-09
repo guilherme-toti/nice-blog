@@ -6,7 +6,7 @@ This is the theme use in my pelican blog http://guilhermetoti.com/
 
 # Blogs Using Nice-Blog
 
-https://blog.colacoweb.net
+https://4s3ti.net
 
 http://pietromarchesi.net
 
@@ -22,7 +22,7 @@ Subtitle: Put your subtitle here
 ```
 Image: image_name.extension
 ```
-**Image must be on `/content/images`**
+**Image must be on** `/content/images`
 
 ### Article image gallery:
 ```
@@ -32,13 +32,13 @@ gallery:<galleryname>
 
 ## Settings
 
-**This settings must be on `pelicanconf.py`**
+**This settings must be on** `pelicanconf.py`
 
 ### Change theme color:
 ```
 THEME_COLOR = 'blue'
 ```
-**Available colors is on `./static/css/colors`**
+**Available colors is on** `./static/css/colors`
 
 ### Menu left side Logo: 
 ```
