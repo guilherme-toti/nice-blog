@@ -1,44 +1,70 @@
 {% extends "base.html" %}
 
 {% block content_placeholder %}
-	<div class="twelve alt columns">
-		{% block content %}{% endblock content %}
-	</div>
+        <div class="twelve alt columns">
+                {% block content %}{% endblock content %}
+        </div>
 
-	<!-- Sidebar -->
-	<div class="four columns">
-		{% if 'about' in SIDEBAR_DISPLAY and SIDEBAR_ABOUT %}
-		<!-- About  -->
-		<div class="widget no-mg-top">
-			<h3 class="headline">About</h3><span class="line"></span><div class="clearfix"></div>
-			<p>{{ SIDEBAR_ABOUT }}</p>
-		</div>
-		{% endif %}
+        <!-- Sidebar -->
+        <div class="four columns">
+                {% if 'about' in SIDEBAR_DISPLAY and SIDEBAR_ABOUT %}
+                <!-- About  -->
+                <div class="widget no-mg-top">
+                        <h3 class="headline">About</h3><span class="line"></span><div class="clearfix"></div>
+                        <p>{{ SIDEBAR_ABOUT }}</p>
+                </div>
+                {% endif %}
 
-		{% if 'categories' in SIDEBAR_DISPLAY %}
-		<!-- Categories -->
-		<div class="widget{% if 'about' not in SIDEBAR_DISPLAY %} no-mg-top{% endif %}">
-			<h3 class="headline">Categories</h3><span class="line"></span><div class="clearfix"></div>
-			<nav class="categories">
-				<ul>
-					{% for cat, null in categories %}
-					    <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-					{% endfor %}
-				</ul>
-			</nav>
-		</div>
-		{% endif %}
-		
-		{% if 'tags' in SIDEBAR_DISPLAY %}
-		<!-- Tags -->
-		<div class="widget{% if 'about' not in SIDEBAR_DISPLAY and 'categories' not in SIDEBAR_DISPLAY %} no-mg-top{% endif %}">
-			<h3 class="headline">Tags</h3><span class="line"></span><div class="clearfix"></div>
-			<nav class="tags">
-				{%- for tag, articles in tags|sort %}
-				    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-				{% endfor %}
-			</nav>
-		</div>
-		{% endif %}
-	</div>
+
+                {% if 'extra' in SIDEBAR_DISPLAY and EXTRA_CONTENT or EXTRA_LINKS %}
+                <!-- Extra side content -->
+                <div class="widget{% if 'about' not in SIDEBAR_DISPLAY %} no-mg-top{% endif %}">
+                    <h3 class="headline">{{ EXTRA_TITLE }}</h3><span class="line"></span><div class="clearfix"></div>
+                      {% if EXTRA_CONTENT %}
+                      
+                        <p> {{ EXTRA_CONTENT }} </p>
+
+                      {% endif %}
+
+                      {% if EXTRA_LINKS %}
+                           <nav class="categories">
+                             <ul>
+                                {% for name, link in EXTRA_LINKS %}
+                                  <li class="active">
+                                     <a href="{{ link }}">{{ name }}</a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </nav>
+                      {% endif %}
+                </div>
+                {% endif %}
+
+
+                {% if 'categories' in SIDEBAR_DISPLAY %}
+                <!-- categories -->
+                <div class="widget{% if 'about' not in SIDEBAR_DISPLAY and 'extra' not in SIDEBAR_DISPLAY%} no-mg-top{% endif %}">
+                        <h3 class="headline">categories</h3><span class="line"></span><div class="clearfix"></div>
+                        <nav class="categories">
+                                <ul>
+                                        {% for cat, null in categories %}
+                                            <li{% if cat == category %} class="active"{% endif %}><a href="{{ siteurl }}/{{ cat.url }}">{{ cat }}</a></li>
+                                        {% endfor %}
+                                </ul>
+                        </nav>
+                </div>
+                {% endif %}
+                
+                {% if 'tags' in SIDEBAR_DISPLAY %}
+                <!-- Tags -->
+                <div class="widget{% if 'about' not in SIDEBAR_DISPLAY and 'extra' not in SIDEBAR_DISPLAY and 'categories' not in SIDEBAR_DISPLAY %} no-mg-top{% endif %}">
+                        <h3 class="headline">Tags</h3><span class="line"></span><div class="clearfix"></div>
+                        <nav class="tags">
+                                {%- for tag, articles in tags|sort %}
+                                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                                {% endfor %}
+                        </nav>
+                </div>
+                {% endif %}
+        </div>
 {% endblock content_placeholder %}

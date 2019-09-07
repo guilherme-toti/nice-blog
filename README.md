@@ -40,7 +40,7 @@ THEME_COLOR = 'blue'
 ```
 **Available colors is on** `./static/css/colors`
 
-### Menu left side Logo: 
+### Menu left side Logo:
 ```
 LOGO = 'logo.extension'
 ```
@@ -56,13 +56,29 @@ The favicon should be 16x16 and should be on `/content/images`
 
 ### To select what to show on sidebar:
 ```
-SIDEBAR_DISPLAY = ['about', 'categories', 'tags']
+SIDEBAR_DISPLAY = ['about', 'categories', 'tags', 'extra']
 ```
 
 ### The text in sidebar About:
 ```
 SIDEBAR_ABOUT = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quae hic dicta eius ad quam eligendi minima praesentium voluptatum? Quidem quaerat eaque libero velit impedit dicta, repudiandae sapiente. Deserunt, excepturi."
 ```
+
+### Extra Side bar content
+
+```
+#What to show in extra content title
+EXTRA_TITLE = 'Useful Links'
+
+#Adds text
+EXTRA_CONTENT = 'Test extra content'
+
+#Sows a list of links
+EXTRA_LINKS = (('Bot Comands', 'https://4s3ti.net/4gentsm1th-commands.html'),
+                ('Link Shortner', 'https://s.4s3ti.net'),
+                ('Pastebin', 'https://paste.4s3ti.net'),)
+```
+
 
 ### Copyright text:
 ```
