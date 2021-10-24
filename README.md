@@ -1,5 +1,5 @@
 # Nice-Blog theme
-This is the theme use in my pelican blog http://guilhermetoti.com/
+Nice and simple pelican theme
 
 # Screenshot
 ![Theme screenshot](screenshot.png) ![Theme screenshot](screenshot2.png)
@@ -7,9 +7,6 @@ This is the theme use in my pelican blog http://guilhermetoti.com/
 # Blogs Using Nice-Blog
 
 https://4s3ti.net
-
-http://pietromarchesi.net
-
 
 # Extras
 
@@ -92,35 +89,34 @@ PLUGINS = ['gallery']
 GALLERY_PATH = 'images/gallery/'
 ```
 
-### To enable Piwik analytics support:
+### Analytics
+
+Any analytics script should be supported.
+
+create file containing the script provided by your analytics platform.
+
+**OBS** File should be at the same level as your pelicanconf.py file
 ```
-#Piwik mandatory variables
-DOMAIN = "yourdomain.com"
-PIWIK_URL = "//analytics.address.com"
-PIWIK_SITE_ID ="ID_NUMBER"
+website
+  |
+  --content/
+  --pelicanconf.py
+  --analytics_script
 ```
-**PIWIK_URL should be as in the example without http: or https:**
-
-### To enable Piwik tracking code options:
+Add the following to your pelicanconf File
 
 ```
-#Track visitors across all subdomains
-TRACK_SUBDOMAINS = True
-
-#Prepend the site domain to the page title when tracking
-PREPEND_DOMAIN = True
-
-#In the "Outlinks" report, hide clicks to know alias URLs
-HIDE_CLICK_KNOWN_ALIAS = True
-
-#Track users with JavaScript disabled
-TRACK_NO_JAVA = True
+analytics = open("analytics_script", "r")
+ANALYTICS_CODE = analytics.read()
 ```
+**OBS:** Make sure that `open("analytics_script")` matches your file name
 
-**Did you like nice-blog? do you use it on your pelican blog?**
+
+
+### Did you like nice-blog? do you use it on your pelican blog?
 
 let us know or just add it to README.MD and make a pull request
 
-**Want to help out and contribute?**
+### Want to help out and contribute?
 
 make a pull request, open an issue, let others know about this project ... there are plenty of ways to contribute, if you want to, just do it!
